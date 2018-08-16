@@ -1,39 +1,3 @@
-### Install with brew
-
-Install the docker binary
-
-```
-brew install docker
-```
-
-Install the docker-machine binary
-
-```
-brew install docker-machine
-```
-
-## usage
-
-Each file in 00_how_to_docker is an executable
-
-```
-./01.sh (Create Char machine)
-```
-
-For dockerfiles you will need to build the image first
-
-```
-docker build -t [container name] [/path/to/Dockerfile]
-```
-
-You then run the container (with right flags for each exercise)
-
-```
-docker run --interactive --tty [
-```
-
-
-
 01 \
 https://docs.docker.com/machine/reference/create/
 
