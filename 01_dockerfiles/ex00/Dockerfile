@@ -1,4 +1,5 @@
 FROM alpine
+MAINTAINER osavytsk <osavytsk@student.unit.ua>
 
 RUN apk update && \
     apk upgrade && \
