@@ -1,23 +1,20 @@
-FROM ruby:2.2.2
+FROM ruby:2.3.4
 
-RUN apt-get update && apt-get install -y mysql-client sqlite3 --no-install-recommends
-RUN gem install rails --version 4.2.4
+RUN apt-get update &&\
+	apt-get install -y nodejs &&\
+	gem install rails -v 4.2.7 &&\
+	mkdir -p /opt/app
 
-ENV RAILS_VERSION 5.0.1
-ENV RAILS_ENV=development
-
-RUN mkdir -p /opt/app
-WORKDIR /opt/app
-
+ONBUILD WORKDIR /opt/app
 ONBUILD ADD app /opt/app
 
-ONBUILD RUN bundle install
-ONBUILD RUN rake db:setup
-ONBUILD RUN rake db:seed
+ONBUILD EXPOSE 3000
+ONBUILD RUN bundle install &&\
+	rake db:migrate && \
+	rake db:seed
 
-
-# see http://guides.rubyonrails.org/command_line.html#rails-dbconsole
 
 # docker build -t ft-rails:on-build .
-
-# docker run -it --rm ft-rails:on-build
+# cd ..
+# docker build -t ex02 .
+# docker run -it --rm -p 3000:3000 ex02

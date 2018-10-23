@@ -1,34 +1,24 @@
-KANBAN 看板
-===========
-`
-bundle install
-rails s
-`
+# README
 
-Demo
-----
-Live demo hosted here on Heroku (database is reset daily):
-[**LIVE DEMO**](http://kanban.seanomlor.com)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-[![Screenshot](/app/assets/images/screenshot.jpg)](http://kanban.seanomlor.com)
+Things you may want to cover:
 
-Summary
--------
-Kanban is a work-in-progress Trello clone.
+* Ruby version
 
-Built with Ruby on Rails on the backend as a JSON API for Backbone.js on the frontend.
+* System dependencies
 
-Notes
------
-* Hand-rolled Rails user authentication with BCrypt
-* Custom, nested Rails JSON templating with [Rabl](https://github.com/nesquena/rabl)
-* Backbone models/collections with [Backbone-relational.js](http://backbonerelational.org/)
-* Auto-updating comment timestamps with jQuery [timeago](http://timeago.yarp.com)
-* Editable board, list and card titles with jQuery [JEditable](http://www.appelsiini.net/projects/jeditable)
+* Configuration
 
-License
--------
-Kanban is released under the [MIT License](/LICENSE).
+* Database creation
 
----
-Developed by [Sean Omlor](http://seanomlor.com)
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
